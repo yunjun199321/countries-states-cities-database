@@ -40,6 +40,8 @@ function main () {
     foreach ($country_arr as $code => $name) {
         if (array_key_exists($code, $city_arr)) {
             $country_city_arr[$country_arr[$code]] = implode("//", $city_arr[$code]);
+        } else {
+            $country_city_arr[$country_arr[$code]] = $country_arr[$code];
         }
     }
 
